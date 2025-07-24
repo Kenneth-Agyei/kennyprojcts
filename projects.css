@@ -1,0 +1,127 @@
+:root {
+  --bg-color: #fff;
+  --text-color: #111;
+  --primary-color: #3498db;
+  --accent-color: #f0f0f0;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  min-height: 100dvh;
+  font-family: 'Poppins', sans-serif; /* Added fallback font */
+  background-color: var(--accent-color);
+  opacity: 0.7;
+  color: var(--bg-color);
+}
+
+h1 {
+  text-align: center;
+  position: relative;
+  top: 100px;
+  margin: 20px;
+  font-size: 6rem;
+  font-weight: 900;
+}
+
+.projects-group {
+  position: relative;
+  top: 200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+iframe {
+  height: 450px;
+  width: 450px;
+  border-radius: 20px;
+  border: none;
+  pointer-events: none;
+  display: block;
+  box-shadow: 0 4px 8px var(--card-shadow);
+}
+
+.project-details {
+  width: 450px;
+  height: 150px;
+  background: linear-gradient(130deg, var(--text-color), var(--accent-color));
+  text-align: center;
+  padding: 10px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.project-details .project-name {
+   font-weight: bold; /* Adjusted for consistency */
+   font-size :2rem; 
+   letter-spacing :3px; 
+}
+
+.project-details .project-name a:is(:link, :visited, :active, :hover) {
+   text-decoration:none; 
+   color : var(--bg-color); 
+}
+
+.project-details .project-date{
+   font-family:'Handwriting', cursive; /* Added fallback font */
+   font-size :1.2rem; 
+   letter-spacing :2px; 
+}
+
+/* For tablets (max width of768px) */
+@media (max-width:768px) {
+   iframe {
+      height: 350px; 
+      width: 40vw; 
+    }
+
+    h1 {
+      font-size: 2rem; 
+    }
+}
+
+/* For phones (max-width480px) */
+@media (max-width :480px) { 
+   .projects-group { 
+      grid-template-columns: 1fr; 
+      gap: 20px;   
+      padding: 0;
+   }
+
+   .project {   
+      width: 100%;   
+      display: flex;  
+      flex-direction: column;    
+      align-items: center;    
+   }
+   
+   iframe {  
+      height: 280px;  
+      width: 90vw;
+      max-width: 100%;   
+   }
+
+   .project-details {     
+       width: 90vw;
+       height: 120px;
+       padding: 10px;
+       gap: 4px;    
+       border-radius: 10px;     
+    }
+
+    .project-name a {      
+        font-size: 1.1rem;       
+        letter-spacing: 1px;      
+    }
+
+    .project-date {     
+        font-size: 0.85rem;      
+        letter-spacing: 1px ;     
+    }
+
+    h1 {      
+        font-size: 2rem;   
+        top :60px ;
+        margin: 10px;    
+     }  
+}

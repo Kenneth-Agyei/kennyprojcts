@@ -1,0 +1,39 @@
+footer {
+  width: 100%;
+  padding: 15px 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #003eb1cc;
+  text-align: center;
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px;
+}
+
+footer span footer {
+  width: 100%;
+  padding: 15px 10px;
+  background: rgba(255, 255, 255, 0.15); /* Light glass effect */
+  color: #ffffffcc;
+  text-align: center;
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px;
+  z-index: 10;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+footer span {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: inherit; /* Inherit main footer color */
+}
+
